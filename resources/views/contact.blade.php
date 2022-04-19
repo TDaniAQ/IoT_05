@@ -1,4 +1,4 @@
 @extends('layout')
 @section('content')
-Ez az üdvözlő oldalunk
+Ez az kapcsolati oldalunk
 @endsection
