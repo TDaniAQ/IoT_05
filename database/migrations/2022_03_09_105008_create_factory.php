@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_uzem', function (Blueprint $table) {
+        Schema::create('factories', function (Blueprint $table) {
             $table->id();
-            $table->string ('nev',50);
-            $table->string('desc',100);
+            $table->string ('name',50);
+            $table->string('desc', 250);
+            $table->timestamps();
         });
     }
 

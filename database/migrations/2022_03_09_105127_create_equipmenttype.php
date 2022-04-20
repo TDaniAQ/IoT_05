@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_berendezes', function (Blueprint $table) {
+        Schema::create('equipmenttypes', function (Blueprint $table) {
             $table->id();
-            $table->integer ('tipus');
-            $table->bigInteger ('uzemid')->references('id')->on('uzem');
-            $table->bigInteger ('szenzorid')->references('id')->on('szenzor');
+            $table->bigInteger ('equipmentid')->references('id')->on('equipment');
+            $table->string ('desc',255);
+            $table->timestamps();
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_berendezes');
+        Schema::dropIfExists('table_berendezestipus');
     }
 };

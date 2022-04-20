@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_berendezestipus', function (Blueprint $table) {
+        Schema::create('sensors', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger ('berendezesid')->references('id')->on('berendezes');
-            $table->string ('desc',100);
+            $table->string ('name',100);
+            $table->string ('desc',255);
+            $table->integer ('KwH');
+            $table->integer ('value');
+            $table->boolean ('running');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_berendezestipus');
+        Schema::dropIfExists('table_szenzor');
     }
 };

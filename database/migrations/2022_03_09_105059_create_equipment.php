@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_szenzor', function (Blueprint $table) {
+        Schema::create('equipments', function (Blueprint $table) {
             $table->id();
-            $table->string ('nev',100);
-            $table->string ('desc',100);
-            $table->integer ('KwH');
-            $table->integer ('ertek');
-            $table->boolean ('running');
+            $table->integer ('type');
+            $table->bigInteger ('factoryid')->references('id')->on('factory');
+            $table->bigInteger ('sensorid')->references('id')->on('sensor');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_szenzor');
+        Schema::dropIfExists('table_berendezes');
     }
 };

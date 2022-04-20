@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         DB::unprepared('
-                CREATE TRIGGER trigger_1 BEFORE UPDATE ON table_szenzor FOR EACH ROW SET new.KwH = new.KwH - old.KwH
+                CREATE TRIGGER trigger_1 BEFORE UPDATE ON sensors FOR EACH ROW SET new.KwH = new.KwH - old.KwH
         ');
     }
 
