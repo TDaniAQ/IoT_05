@@ -17,9 +17,9 @@ class SensorFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(),
+            'name' => $this->faker->unique()->word(),
             'desc' => $this->faker->text(),
-            'KwH' => $this->faker->randomNumber(),
+            'KwH' => random_int(1,100),
             'value' => $this->faker->randomNumber(),
             'running' => $this->faker->boolean(),
         ];
