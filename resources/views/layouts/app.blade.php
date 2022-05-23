@@ -16,7 +16,6 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -33,6 +32,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
+    <link rel="stylesheet" type="text/css" href="{{ url('public/assets/css/bootstrap.min.css') }}" />
+
 </head>
 
 <body>
@@ -48,6 +49,12 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/facilities">Factories</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/sensors">Sensors</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/equipment_types">Equipment types</a>
                 </li>
             </ul>
         </div>

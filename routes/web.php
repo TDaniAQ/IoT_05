@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EquipmentController;
+use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\SensorController;
+use App\Http\Controllers\EquipmenttypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+Route::get('/equipment', [EquipmentController::class, 'index'])->name('equipments');
+
+Route::get('/equipment_types', [EquipmenttypeController::class, 'index'])->name('types');
+
+Route::get('/facilities', [FacilityController::class, 'index'])->name('factories');
+
+Route::get('/sensors', [SensorController::class, 'index'])->name('sensors');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
