@@ -16,7 +16,7 @@
                         <thead>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Desc</th>
+                            <th>Description</th>
                             <th>KwH</th>
                             <th>Value</th>
                             <th>Running</th>
